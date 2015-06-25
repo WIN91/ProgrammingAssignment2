@@ -5,10 +5,9 @@
 ## Function that computes the inverse of a matrix
 
 makeCacheMatrix <- function(x=matrix()) {
-  #m<-NULL
-  set<-function(y){
+  set<-function(y)
+  set<-function(x){
     x<<-y
-  # m<<-NULL
   }
 get1<-function()x
 setmatrix<-function(solve)m<<-solve
@@ -23,19 +22,16 @@ cacheSolve <- function(x1) {
   m<-x1$getmatrix()
   print(m)
   if(!is.null(m)){
-    message("obtain cached data")
+    message("retrieve cached data")
     return(m)
   }
-  #print(x)
   matrix2<-x$get()
   m<-solve(matrix2)
   ## Return a matrix that is the inverse of 'x'
   x$Setmatrix(m)
 }
 
-#x<-matrix(c(1,-2,-2,3),ncol=2,byrow=T)
 
-#solve(x)
 #testing the function if it works
 mat<-matrix(data=c(4,2,7,6),nrow=2,ncol=2)
 mat2<-makeCacheMatrix(mat)
@@ -46,5 +42,4 @@ cacheSolve(mat2)
 
 
 
-
-
+##this is updated
